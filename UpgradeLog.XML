@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="MediaOrganizer">
+</Property><Property Name="Solution File" Value="D:\Software\MediaOrganizer\MediaOrganizer.sln">
+</Property><Property Name="Date" Value="sábado, 7 de Junho de 2014">
+</Property><Property Name="Time" Value="10:00">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="MediaOrganizer.sln" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer.sln">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\MediaOrganizer.csproj" Description="Project file successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\MediaOrganizer.csproj">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\MediaOrganizer.csproj.user" Description="Project user file successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\MediaOrganizer.csproj.user">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\Form1.cs" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\Form1.cs">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\Form1.Designer.cs" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\Form1.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\Program.cs" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\Program.cs">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\Properties\AssemblyInfo.cs" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\Properties\Resources.Designer.cs" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\Properties\Settings.Designer.cs" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\MediaOrganizer_TemporaryKey.pfx" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\MediaOrganizer_TemporaryKey.pfx">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\Properties\Settings.settings" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\App.config" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\App.config">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\resources\open_folder_yellow.png" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\resources\open_folder_yellow.png">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\Form1.resx" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\Form1.resx">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\Properties\Resources.resx" Description="File successfully backed up as D:\Software\MediaOrganizer\Backup\MediaOrganizer\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="MediaOrganizer" Source="MediaOrganizer\MediaOrganizer.csproj" Description="The project file does not require conversion.">
+</Event><Event ErrorLevel="3" Project="MediaOrganizer" Source="MediaOrganizer\MediaOrganizer.csproj" Description="No Conversion Required">
+</Event><Event ErrorLevel="0" Project="" Source="MediaOrganizer.sln" Description="Solution converted successfully">
+</Event><Event ErrorLevel="3" Project="" Source="MediaOrganizer.sln" Description="Converted">
+</Event></UpgradeLog>
