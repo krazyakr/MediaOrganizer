@@ -1,4 +1,5 @@
-﻿using System;
+﻿using log4net;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,9 +15,12 @@ namespace MediaOrganizer
     public partial class Form1 : Form
     {
         private FolderBrowserDialog fbd;
+        
 
         public Form1()
         {
+
+
             InitializeComponent();
 
             fbd = new FolderBrowserDialog();
@@ -32,6 +36,7 @@ namespace MediaOrganizer
             DialogResult result = fbd.ShowDialog();
 
             textBox2.Text = fbd.SelectedPath;
+            Program.log.Debug("Source Path Selected: " + fbd.SelectedPath);
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -39,6 +44,7 @@ namespace MediaOrganizer
             DialogResult result = fbd.ShowDialog();
 
             textBox3.Text = fbd.SelectedPath;
+            Program.log.Debug("Destination Path Selected: " + fbd.SelectedPath);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,13 +58,17 @@ namespace MediaOrganizer
             bool overwrite = checkBox1.Checked;
 
             textBox1.AppendText("Collecting files ");
+            Program.log.Debug("Collecting files");
             Dictionary<string, DateTime> files = CollectFilesToOrganize(source);
+            Program.log.Debug("Collecting files DONE");
 
             textBox1.AppendText(Environment.NewLine);
             textBox1.AppendText(files.Count + " files to organize.");
             textBox1.AppendText(Environment.NewLine);
             textBox1.AppendText(Environment.NewLine + "Copying files ...");
             textBox1.AppendText(Environment.NewLine);
+
+            Program.log.Debug("Copying files");
 
             foreach (string key in files.Keys)
             {
@@ -68,27 +78,35 @@ namespace MediaOrganizer
                 if (!Directory.Exists(destination + "\\" + folderName))
                     Directory.CreateDirectory(destination + "\\" + folderName);
 
+                string logEntry = key + " ->> " + folderName + " ";
                 textBox1.AppendText(Environment.NewLine + key + " ->> " + folderName + " ... ");
+
 
                 if (!File.Exists(destination + "\\" + folderName + "\\" + Path.GetFileName(key)))
                 {
                     File.Copy(key, destination + "\\" + folderName + "\\" + Path.GetFileName(key));
                     textBox1.AppendText("Done");
+                    logEntry += "Done";
                 }
                 else if (overwrite)
                 {
                     File.Copy(key, destination + "\\" + folderName + "\\" + Path.GetFileName(key), true);
                     textBox1.AppendText("Overwrite");
+                    logEntry += "Overwrite";
                 }
                 else
                 {
                     string dest = destination + "\\" + folderName + "\\" + GetNewFileName(key, destination + "\\" + folderName + "\\");
                     File.Copy(key, dest);
                     textBox1.AppendText("Renamed = " + dest);
+                    logEntry += "Renamed = " + dest;
                 }
 
+                Program.log.Debug(logEntry);
                 //System.Threading.Thread.Sleep(500);
             }
+
+            Program.log.Debug("Copying files DONE");
 
             textBox1.AppendText(Environment.NewLine);
             textBox1.AppendText("Completed.");
@@ -114,6 +132,8 @@ namespace MediaOrganizer
 
             foreach (string file in files)
             {
+                Program.log.Debug("File: " + file);
+
                 try
                 {
                     string ext = Path.GetExtension(file);
